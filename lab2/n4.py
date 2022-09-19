@@ -8,5 +8,4 @@ elif (a==b and a!=c) or (a==c and a!=b) or (b==c and a!=b):
 elif a==b==c:
     print('There are no unique numbers')
 else:
-    print('There can not be any mistake \nMy code is perfect')
-print('There can not be any mistake \nMy code is perfect')
+    print('There can not be any mistakes \nMy code is perfect') #это просто шутка
