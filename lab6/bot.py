@@ -10,13 +10,13 @@ def start(message):
 
 @bot.message_handler(commands=['help'])
 def help(message):
-    bot.send_message(message.chat.id, 'Этот бот присылает тебе случайное число и так же небольшой факт о нем. Для этого просто напиши /number')
+    bot.send_message(message.chat.id, 'Этот бот присылает тебе абсолютно случайную картинку. Для этого просто напиши /img')
 
-@bot.message_handler(commands=['number'])
+@bot.message_handler(commands=['img'])
 def number(message):
-    r = requests.get('http://numbersapi.com/random/math')
-    url = r.url
-    bot.send_message(message.chat.id, url)
+    r = requests.get('https://random.imagecdn.app/700/500')
+    q = r.url
+    bot.send_photo(message.chat.id, q)
 
 
 bot.polling(none_stop=True)
